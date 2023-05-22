@@ -1,0 +1,67 @@
+.animation__container {
+  font-weight: 800;
+  font-size: 3em;
+  opacity: 1;
+}
+
+.animation__container svg {
+  width: 90%;
+  display: block;
+  top: 28%;
+  margin: -8% 0 0 5%;
+  position: fixed;
+}
+
+.animation__container svg .text {
+  width: 100%;
+  fill: transparent;
+  stroke-width: 1;
+  stroke-linejoin: round;
+  stroke-dasharray: 90, 310;
+  stroke-dashoffset: 0;
+  -webkit-animation: text 8s infinite linear;
+  animation: text 8s infinite linear;
+  font-family: var(--heading-font);
+  letter-spacing: 4px;
+}
+
+.animation__container svg .text:nth-child(4n + 1) {
+  stroke: #fff;
+  -webkit-animation-delay: -2s;
+  animation-delay: -2s;
+}
+
+.animation__container svg .text:nth-child(4n + 2) {
+  stroke: #fff;
+  -webkit-animation-delay: -4s;
+  animation-delay: -4s;
+}
+
+.animation__container svg .text:nth-child(4n + 3) {
+  stroke: #fff;
+  -webkit-animation-delay: -6s;
+  animation-delay: -6s;
+}
+
+.animation__container svg .text:nth-child(4n + 4) {
+  stroke: #fff;
+  -webkit-animation-delay: -8s;
+  animation-delay: -8s;
+}
+
+@keyframes text {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .animation__container {
+    font-size: 4em;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .animation__container {
+    font-size: 5em;
+  }
+}

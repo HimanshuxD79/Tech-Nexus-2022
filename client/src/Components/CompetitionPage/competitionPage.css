@@ -1,0 +1,485 @@
+@import url("https://fonts.googleapis.com/css2?family=Play&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+:root {
+  --angle: calc(360 / 6) deg;
+  --render-distance: 27rem;
+  --greater-render-distance: 30rem;
+}
+
+/* Cool infinite background scrolling animation.
+ * Twitter: @kootoopas
+ */
+/* Exo thin font from Google. */
+/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px;
+  }
+}
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px;
+  }
+}
+
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: 50px;
+  }
+}
+
+@keyframes bg-scrolling {
+  0% {
+    background-position: 50px;
+  }
+}
+
+.light {
+  position: absolute;
+  width: 0px;
+  opacity: 0.75;
+  background-color: blue;
+  -webkit-box-shadow: blue 0px 0px 20px 2px;
+  box-shadow: blue 0px 0px 20px 2px;
+  opacity: 0;
+  top: 100vh;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+}
+
+.x1 {
+  -webkit-animation: floatUp 4s infinite ease-in-out;
+  animation: floatUp 4s infinite ease-in-out;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.x2 {
+  -webkit-animation: floatUp 7s infinite ease-in-out;
+  animation: floatUp 7s infinite ease-in-out;
+  -webkit-transform: scale(1.6);
+  transform: scale(1.6);
+  left: 15%;
+}
+
+.x3 {
+  -webkit-animation: floatUp 2.5s infinite ease-in-out;
+  animation: floatUp 2.5s infinite ease-in-out;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  left: -15%;
+}
+
+.x4 {
+  -webkit-animation: floatUp 4.5s infinite ease-in-out;
+  animation: floatUp 4.5s infinite ease-in-out;
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  left: -34%;
+}
+
+.x5 {
+  -webkit-animation: floatUp 8s infinite ease-in-out;
+  animation: floatUp 8s infinite ease-in-out;
+  -webkit-transform: scale(2.2);
+  transform: scale(2.2);
+  left: -57%;
+}
+
+.x6 {
+  -webkit-animation: floatUp 3s infinite ease-in-out;
+  animation: floatUp 3s infinite ease-in-out;
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+  left: -81%;
+}
+
+.x7 {
+  -webkit-animation: floatUp 5.3s infinite ease-in-out;
+  animation: floatUp 5.3s infinite ease-in-out;
+  -webkit-transform: scale(3.2);
+  transform: scale(3.2);
+  left: 37%;
+}
+
+.x8 {
+  -webkit-animation: floatUp 4.7s infinite ease-in-out;
+  animation: floatUp 4.7s infinite ease-in-out;
+  -webkit-transform: scale(1.7);
+  transform: scale(1.7);
+  left: 62%;
+}
+
+.x9 {
+  -webkit-animation: floatUp 4.1s infinite ease-in-out;
+  animation: floatUp 4.1s infinite ease-in-out;
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+  left: 85%;
+}
+
+@-webkit-keyframes floatUp {
+  0% {
+    top: 100vh;
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    top: 0vh;
+    opacity: 0.8;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    top: -100vh;
+    opacity: 0;
+  }
+}
+
+@keyframes floatUp {
+  0% {
+    top: 100vh;
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    top: 0vh;
+    opacity: 0.8;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    top: -100vh;
+    opacity: 0;
+  }
+}
+
+/* Main styles */
+#events {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  background: url("./assets/bg.png") repeat 0 0;
+  -webkit-animation: bg-scrolling-reverse 7s infinite ease-in-out;
+  animation: bg-scrolling-reverse 7s infinite ease-in-out;
+  transition: all 1s;
+}
+
+.responsiveHeading {
+  font-size: var(--font-size-l);
+  font-family: var(--heading-font);
+  display: none;
+}
+
+.circle-container {
+  position: relative;
+  width: 30em;
+  height: 150vh;
+  padding: 2.8em;
+  /*2.8em = 2em*1.4 (2em = half the width of a link with img, 1.4 = sqrt(2))*/
+  border-radius: 50%;
+  margin: 1.75em auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 50vh;
+}
+
+.circle-container a {
+  position: absolute;
+}
+
+.circle-container a:hover img {
+  height: 290px;
+  -webkit-box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.658);
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.658);
+}
+
+.circle-container a:hover .aboutEvents {
+  opacity: 0;
+}
+
+a:hover > .deg0 {
+  -webkit-animation: none;
+  animation: none;
+}
+
+.circle-container a img {
+  display: block;
+  height: 270px;
+  width: auto;
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
+  border-radius: 6px;
+}
+
+.circle-container a {
+  text-decoration: none;
+}
+
+.aboutEvents {
+  color: white;
+  text-decoration: none !important;
+  font-size: var(--font-size-xl);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  min-height: 25rem;
+  font-family: var(--heading-font);
+}
+
+.aboutEvents h6 {
+  margin: 0;
+  padding: 30px 5px;
+  -webkit-animation: fadein 1s;
+  animation: fadein 1s;
+  font-family: var(--heading-font);
+  text-align: center;
+  font-size: 3rem;
+}
+
+.aboutEvents p {
+  font-size: var(--font-size-m);
+  text-align: justify;
+  width: 100%;
+  -webkit-animation: fadein 1s;
+  animation: fadein 1s;
+  font-family: var(--content-font);
+}
+
+.aboutEvents p p {
+  font-size: 1.9rem;
+  text-align: center;
+}
+
+.aboutEvents div {
+  -webkit-animation: fadein 1s;
+  animation: fadein 1s;
+}
+
+.deg0 {
+  -webkit-animation: updown 1s infinite ease-in-out alternate;
+  animation: updown 1s infinite ease-in-out alternate;
+  -webkit-transform: translate(var(--render-distance));
+  transform: translate(var(--render-distance));
+  -webkit-transform: rotate(-5deg) translate(var(--render-distance))
+    rotate(5deg);
+  transform: rotate(-5deg) translate(var(--render-distance)) rotate(5deg);
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+/* 12em = half the width of the wrapper */
+.deg45 {
+  -webkit-animation: updown 1s infinite ease-in-out alternate;
+  animation: updown 1s infinite ease-in-out alternate;
+  -webkit-transform: rotate(45deg) translate(var(--greater-render-distance))
+    rotate(-45deg);
+  transform: rotate(45deg) translate(var(--greater-render-distance))
+    rotate(-45deg);
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+.deg135 {
+  -webkit-animation: updown 1s infinite ease-in-out alternate;
+  animation: updown 1s infinite ease-in-out alternate;
+  -webkit-transform: rotate(135deg) translate(var(--greater-render-distance))
+    rotate(-135deg);
+  transform: rotate(135deg) translate(var(--greater-render-distance))
+    rotate(-135deg);
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+
+.deg180 {
+  -webkit-animation: updown 1s infinite ease-in-out alternate;
+  animation: updown 1s infinite ease-in-out alternate;
+  -webkit-transform: rotate(185deg) translate(var(--render-distance))
+    rotate(-185deg);
+  transform: rotate(185deg) translate(var(--render-distance)) rotate(-185deg);
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+.deg225 {
+  -webkit-animation: updown 1s infinite ease-in-out alternate;
+  animation: updown 1s infinite ease-in-out alternate;
+  -webkit-transform: rotate(245deg) translate(var(--render-distance))
+    rotate(-245deg);
+  transform: rotate(245deg) translate(var(--render-distance)) rotate(-245deg);
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+
+.deg270 {
+  -webkit-animation: updown 1s infinite ease-in-out alternate;
+  animation: updown 1s infinite ease-in-out alternate;
+  -webkit-transform: rotate(270deg)
+    translate(calc((-1) * (var(--render-distance)))) rotate(-270deg);
+  transform: rotate(270deg) translate(calc((-1) * (var(--render-distance))))
+    rotate(-270deg);
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+
+.deg315 {
+  -webkit-transform: rotate(295deg) translate(var(--render-distance))
+    rotate(-295deg);
+  transform: rotate(295deg) translate(var(--render-distance)) rotate(-295deg);
+  -webkit-animation: updown 1s infinite ease-in-out alternate;
+  animation: updown 1s infinite ease-in-out alternate;
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+
+@-webkit-keyframes updown {
+  0% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: 5%;
+  }
+}
+
+@keyframes updown {
+  0% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: 5%;
+  }
+}
+
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 1160px) {
+  :root {
+    --render-distance: 20rem;
+    --greater-render-distance: 25rem;
+  }
+  .circle-container a:hover img {
+    height: 200px;
+    background-color: black;
+  }
+  .circle-container a img {
+    display: block;
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .light {
+    position: fixed;
+  }
+  .aboutEvents {
+    height: max-content;
+    min-height: 2rem;
+    padding: 10px 0;
+    font-size: var(--font-size-l);
+    width: 90vw;
+  }
+  .circle-container {
+    position: unset;
+    margin-bottom: unset;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    z-index: 2;
+    padding: unset;
+    margin: unset;
+  }
+  .circle-container a {
+    position: unset;
+    -webkit-transform: unset;
+    transform: unset;
+    -webkit-animation: unset;
+    animation: unset;
+    padding: 15px 15px;
+  }
+  .circle-container a:hover img {
+    height: 200px;
+    background-color: black;
+  }
+  .responsiveHeading {
+    display: block;
+    color: white;
+    font-size: var(--font-size-l);
+  }
+}
+/*# sourceMappingURL=events.css.map */

@@ -1,0 +1,106 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+::-webkit-scrollbar {
+  width: 0;
+}
+
+::placeholder {
+  color: rgba(245, 245, 245, 0.836);
+}
+
+:root {
+  /* --theme-color-dark: #09184a; */
+  --theme-color-dark: rgb(2, 0, 119);
+  --theme-color-light: #98d6ff;
+  --font-size-xl: 4rem;
+  --font-size-l: 2.1rem;
+  --font-size-m: 1.3rem;
+  --font-size-sm: 1.1rem;
+  --font-size-vsm: 0.9rem;
+  --heading-font: "Fira Sans", sans-serif;
+  /* --content-font: "Roboto", sans-serif; */
+  /* --content-font: "Abel", sans-serif; */
+  --content-font: "Noto Sans", sans-serif;
+
+  --speed: 0.85;
+  --primary: #fff;
+  --size: 30;
+  --ease: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden !important;
+}
+.App {
+  margin: 0;
+}
+
+main {
+  margin-left: 78px;
+}
+
+.video-container {
+  position: fixed;
+  height: 100vh;
+  z-index: -2;
+}
+.video-container video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+/* OVERRIDING THE CSS OF EXTERNAL LIBRARY */
+
+.slider-left div,
+.slider-right div {
+  border: none !important;
+}
+
+.react-3d-carousel .slider-container .slider-left div,
+.react-3d-carousel .slider-container .slider-right div {
+  font-size: 45px;
+}
+
+.react-3d-carousel .slider-container .slider-left div:hover,
+.react-3d-carousel .slider-container .slider-right div:hover {
+  color: var(--theme-color-light);
+}
+
+.react-3d-carousel .slider-container .slider-left {
+  right: 120% !important;
+}
+
+.react-3d-carousel .slider-container .slider-right {
+  left: 120% !important;
+}
+
+@media only screen and (max-width: 768px) {
+  main {
+    scroll-snap-type: unset;
+    height: max-content;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    margin-left: unset;
+  }
+  section {
+    height: max-content !important;
+  }
+  .react-3d-carousel .slider-container .slider-left {
+    right: 101% !important;
+  }
+  .react-3d-carousel .slider-container .slider-right {
+    left: 101% !important;
+  }
+  .react-3d-carousel .slider-container .slider-left div,
+  .react-3d-carousel .slider-container .slider-right div {
+    font-size: 25px;
+  }
+}

@@ -1,0 +1,167 @@
+#contactUs {
+  height: 100vh !important;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 11;
+  transition: all 0.4s;
+  backdrop-filter: blur(15px);
+  overflow: hidden;
+}
+
+.contactUsForm {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  min-width: 70vw;
+  margin: 20px;
+  background-color: rgba(0, 0, 0, 0.712);
+  border-radius: 6px;
+  border: 1px solid white;
+  animation: fade-down 1s forwards ease;
+}
+
+@keyframes fade-down {
+  0% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  100% {
+    transform: unset;
+    opacity: 1;
+  }
+}
+
+.contactUsForm h1 {
+  font-size: 3rem;
+  font-weight: 200;
+  font-family: var(--heading-font);
+  color: white;
+  margin-left: 4%;
+  margin-top: 1%;
+}
+
+.contactUsForm button {
+  font-size: 35px;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.contactUsForm button:hover {
+  background: transparent;
+}
+
+.contactUsForm form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.closeButton {
+  margin-top: 0;
+  margin-left: auto;
+  color: white;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 25px !important;
+}
+
+.closeButton:hover {
+  transform: scale(1.25);
+}
+
+.contactUsForm form .inputBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 42%;
+  margin: 4%;
+  font-size: var(--font-size-m);
+  font-family: var(--content-font);
+}
+
+.contactUsForm form .inputBlock input {
+  width: 100%;
+  padding: 2%;
+  border-radius: 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  color: white;
+  font-size: var(--font-size-m);
+}
+
+.inputBlock label {
+  color: white;
+}
+
+@keyframes underline {
+  0% {
+    transform: scaleX(0);
+  }
+}
+
+.contactUsForm form .feedbackInputBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 92%;
+  margin: 4%;
+  font-size: var(--font-size-m);
+  font-family: var(--content-font);
+}
+
+.feedbackInputBlock label {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.contactUsForm form .feedbackInputBlock textarea {
+  width: 100%;
+  padding: 2%;
+  border-radius: 0;
+  background: transparent;
+  border: none;
+  /* outline: none; */
+  border-bottom: solid 1px white;
+  color: white;
+  font-size: var(--font-size-m);
+}
+
+.submitButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.submitButton button {
+  border: 1px solid white;
+  font-size: var(--font-size-m);
+  border-radius: 6px;
+  padding: 12px 22px;
+  color: white;
+  transition: all 0.4s;
+  margin-bottom: 15px;
+}
+
+.submitButton button:hover {
+  color: black;
+  background: white;
+  transform: scale(0.9);
+}
+
+@media only screen and (max-width: 768px) {
+  .contactUsForm form .inputBlock {
+    width: 92%;
+  }
+  .contactUsForm h1 {
+    font-size: var(--font-size-l);
+  }
+}

@@ -1,0 +1,52 @@
+#alert {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alertBox {
+  min-height: 50px;
+  height: max-content;
+  text-align: center;
+  padding: 5px;
+  width: 70vw;
+  background: black;
+  border-radius: 6px;
+  border: 1px solid white;
+  position: fixed;
+  z-index: 12;
+  top: 0;
+  margin-top: 10px;
+  animation: fade-in-down 5s forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: var(--content-font);
+  font-size: var(--font-size-m);
+}
+
+@media only screen and (max-width: 768px) {
+  .alertBox {
+    font-size: var(--font-size-sm);
+  }
+}
+
+@keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    top: -100px;
+  }
+  20% {
+    opacity: 1;
+    top: 0px;
+  }
+  80% {
+    opacity: 1;
+    top: 0px;
+  }
+  100% {
+    opacity: 0;
+    top: -100px;
+  }
+}

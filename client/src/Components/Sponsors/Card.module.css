@@ -1,0 +1,210 @@
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.pageContent {
+  display: grid;
+  grid-gap: 1rem;
+  padding: 1rem;
+  max-width: 1024px;
+  margin: 0 auto;
+  font-family: var(--content-font);
+}
+
+.card {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  width: 150%;
+  text-align: center;
+  color: var(--theme-color-dark);
+  background-color: hsl(0, 0%, 96%);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1),
+    0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1),
+    0 16px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  height: 240px;
+  width: 250px;
+}
+
+.card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  background-size: cover;
+  background-position: 0 0;
+  transition: transform 0.6s;
+  pointer-events: none;
+}
+.card:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  color: var(--theme-color-light);
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: transform 0.6s;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  transition: transform 0.6s;
+  z-index: 1;
+}
+.content > * + * {
+  margin-top: 1rem;
+}
+
+.title {
+  font-weight: bold;
+  line-height: 1.2;
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: var(--content-font);
+  background: linear-gradient(
+    to right,
+    var(--theme-color-dark) 10%,
+    var(--theme-color-light) 50%,
+    black 60%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 5s linear infinite;
+  display: inline-block;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.card:hover .title {
+  color: white;
+}
+.card:hover .copy {
+  color: white;
+}
+
+.copy {
+  font-family: var(--content-font);
+  font-size: 1.125rem;
+  line-height: 1.35;
+  padding-top: 0.5rem;
+}
+
+.pageContent button {
+  cursor: pointer;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.65rem;
+  font-weight: bold;
+  letter-spacing: 0.025rem;
+  text-transform: uppercase;
+  background-color: var(--theme-color-light);
+  border: none;
+}
+.pageContent a {
+  color: var(--theme-color-darker);
+}
+button:hover {
+  background-color: var(--theme-color-dark);
+  color: white;
+}
+.card:after {
+  transform: translateY(0);
+}
+
+.content {
+  transform: translateY(calc(100% - 3.8rem));
+}
+.content > *:not(.title) {
+  opacity: 0;
+  transform: translateY(1rem);
+  transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+}
+.card:hover:after {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+.card:hover:after {
+  transform: translateY(-50%);
+}
+.card:hover .content {
+  transform: translateY(-10%);
+}
+.card:hover .content > *:not(.title){
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: calc(var(--d) / 8);
+}
+
+.card:hover .title {
+
+  font-weight: bold;
+  line-height: 1.2;
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: var(--content-font);
+  background: linear-gradient(
+    to right,
+    white 10%,
+    white 50%,
+    var(--theme-color-light) 60%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 5s linear infinite;
+  display: inline-block;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+@media (max-width: 768px) {
+  .card {
+    height: 240px;
+    width: 200px;
+  }
+}
+@media (max-width: 320px) {
+  .card {
+    height: 200px;
+    width: 180px;
+  }
+}

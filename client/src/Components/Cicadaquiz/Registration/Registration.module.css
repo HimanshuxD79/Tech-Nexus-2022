@@ -1,0 +1,368 @@
+.myfeedbackform {
+  max-width: 420px;
+  margin: 50px auto;
+  margin-bottom: 10px;
+}
+
+/* FOR BACKGROUND */
+
+.cicadaReg {
+  min-height: 100vh;
+  /* background: url("../../CompetitionPage/assets/bg.png") repeat 0 0;
+  -webkit-animation: bg-scrolling-reverse 7s infinite ease-in-out;
+  animation: bg-scrolling-reverse 7s infinite ease-in-out;
+  transition: all 1s; */
+  background: url("./bg.gif");
+  z-index: 1;
+  background-position: center;
+  background-size: cover;
+}
+
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px;
+  }
+}
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px;
+  }
+}
+
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: 50px;
+  }
+}
+
+@keyframes bg-scrolling {
+  0% {
+    background-position: 50px;
+  }
+}
+
+.light {
+  position: absolute;
+  width: 0px;
+  opacity: 0.75;
+  background-color: var(--theme-color-light);
+  -webkit-box-shadow: var(--theme-color-light) 0px 0px 20px 2px;
+  box-shadow: var(--theme-color-light) 0px 0px 20px 2px;
+  opacity: 0;
+  top: 100vh;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  z-index: 1;
+}
+
+.x1 {
+  -webkit-animation: floatUp 4s infinite ease-in-out;
+  animation: floatUp 4s infinite ease-in-out;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.x2 {
+  -webkit-animation: floatUp 7s infinite ease-in-out;
+  animation: floatUp 7s infinite ease-in-out;
+  -webkit-transform: scale(1.6);
+  transform: scale(1.6);
+  left: 15%;
+}
+
+.x3 {
+  -webkit-animation: floatUp 2.5s infinite ease-in-out;
+  animation: floatUp 2.5s infinite ease-in-out;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  left: -15%;
+}
+
+.x4 {
+  -webkit-animation: floatUp 4.5s infinite ease-in-out;
+  animation: floatUp 4.5s infinite ease-in-out;
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  left: -34%;
+}
+
+.x5 {
+  -webkit-animation: floatUp 8s infinite ease-in-out;
+  animation: floatUp 8s infinite ease-in-out;
+  -webkit-transform: scale(2.2);
+  transform: scale(2.2);
+  left: -57%;
+}
+
+.x6 {
+  -webkit-animation: floatUp 3s infinite ease-in-out;
+  animation: floatUp 3s infinite ease-in-out;
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+  left: -81%;
+}
+
+.x7 {
+  -webkit-animation: floatUp 5.3s infinite ease-in-out;
+  animation: floatUp 5.3s infinite ease-in-out;
+  -webkit-transform: scale(3.2);
+  transform: scale(3.2);
+  left: 37%;
+}
+
+.x8 {
+  -webkit-animation: floatUp 4.7s infinite ease-in-out;
+  animation: floatUp 4.7s infinite ease-in-out;
+  -webkit-transform: scale(1.7);
+  transform: scale(1.7);
+  left: 62%;
+}
+
+.x9 {
+  -webkit-animation: floatUp 4.1s infinite ease-in-out;
+  animation: floatUp 4.1s infinite ease-in-out;
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+  left: 85%;
+}
+
+@-webkit-keyframes floatUp {
+  0% {
+    top: 100vh;
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    top: 0vh;
+    opacity: 0.8;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    top: -100vh;
+    opacity: 0;
+  }
+}
+
+@keyframes floatUp {
+  0% {
+    top: 100vh;
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    top: 0vh;
+    opacity: 0.8;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    top: -100vh;
+    opacity: 0;
+  }
+}
+
+/* END BACKGROUND ANIM */
+
+/* MAIN CSS */
+
+.heading {
+  font-size: var(--font-size-xl);
+  font-family: var(--heading-font);
+  margin: auto;
+  padding: 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.notification {
+  display: flex;
+  text-align: center;
+  margin: auto;
+  width: max-content;
+  font-size: var(--font-size-m);
+  font-family: var(--content-font);
+  color: black;
+  padding: 4px 10px;
+  margin: 5px auto 5px auto;
+  background: var(--theme-color-light);
+  animation: fade-in 0.6s forwards;
+  border-radius: 6px;
+}
+
+@keyframes identifier {
+}
+
+.starttext {
+  display: flex;
+  width: calc(100vw - 78px);
+  justify-content: center;
+  margin: auto;
+  font-size: var(--font-size-m);
+  font-family: var(--content-font);
+  /* background: var(--theme-color-light); */
+  color: white;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 10px;
+  padding: 4px 10px;
+  margin: 5px auto 5px auto;
+}
+
+.starttext span:nth-child(1) {
+  background: black;
+  border-radius: 6px 0 0 6px;
+  padding: 5px;
+  color: var(--theme-color-light);
+  border: 1px solid var(--theme-color-light);
+}
+
+.starttext span:nth-child(2) {
+  background: var(--theme-color-light);
+  border-radius: 0px 6px 6px 0;
+  padding: 5px;
+  color: black;
+}
+
+.myfeedbackform {
+  position: relative;
+  /* background: black; */
+  z-index: 2;
+  border-radius: 6px;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border: var(--theme-color-light) 1px solid;
+  animation: glow 2s alternate-reverse infinite;
+}
+
+@keyframes glow {
+  0% {
+    transform: translateY(10px);
+    box-shadow: 0 0 1px white;
+  }
+  100% {
+    transform: unset;
+    box-shadow: 0 0 10px white;
+  }
+}
+
+.cicadaReg h3 {
+  font-size: var(--font-size-l);
+  font-family: var(--content-font);
+  color: white;
+  padding: 15px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feedbackinput {
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid var(--theme-color-light);
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
+  animation: fade-in 1s forwards;
+}
+
+input::-webkit-input-placeholder {
+  color: #999;
+  transition: all 1s;
+  text-align: center;
+}
+input:focus::-webkit-input-placeholder {
+  transform: scale(0);
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: unset;
+  }
+}
+
+.feedbackinput:focus {
+  border: 2px solid #ffffff;
+}
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize: vertical;
+}
+
+.btncontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding-bottom: 15px;
+}
+
+.btn {
+  background: transparent;
+  border: var(--theme-color-light) 1px solid;
+  border-radius: 6px;
+  width: max-content;
+  padding: 5px 2rem;
+  cursor: pointer;
+  font-size: var(--font-size-m);
+  font-family: var(--content-font);
+  color: white;
+  text-transform: uppercase;
+  transition: all 0.4s;
+}
+
+.btn:hover {
+  transform: scale(0.94);
+  background: var(--theme-color-light);
+}
+
+@media all and (max-width: 769px) {
+  .heading {
+    font-size: var(--font-size-l);
+    padding-top: 40px;
+  }
+  .starttext {
+    width: 100vw;
+  }
+  .starttext {
+    font-size: var(--font-size-vsm);
+  }
+  .cicadaReg {
+    padding-bottom: 45px;
+  }
+}
+
+@media all and (max-width: 479px) {
+  .myfeedbackform {
+    width: 300px;
+  }
+}
