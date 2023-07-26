@@ -3,4 +3,4 @@ Tech-Nexus, a National Level Online Fest organized by NIT-Hamirpur, is a pristin
 
 This extravaganza would be preceded by live electrifying events like Esports, Hackathons, Guest Lecture, and many more exciting surprises. Instated to foster the vision of  reigniting the spark that has been extinguished by this pandemic, Tech-Nexus will be a gauge of technological eminence. With renowned personalities onboard, the fest promises a unique voyage full of innovation, networking and learning.
 
-![nexus](https://imgur.com/vBYB2rn)
+![nexus](https://i.imgur.com/vBYB2rn.png)
