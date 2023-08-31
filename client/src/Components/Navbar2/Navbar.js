@@ -225,32 +225,32 @@ const Navbar = (props) => {
                 </li>
               </ul>
             </li> */}
-            <li>
-              <Link
-                onClick={() => closeNav(1)}
-                to={{
-                  pathname: `/ca`,
-                }}
-                target="_"
-              >
-                <FaUserTie className="iconNav" />
-                <span className="afterLogoLinkName">CA Portal</span>
-              </Link>
-              <ul className="submenu ">
-                <li>
-                  <Link
-                    target="_"
-                    onClick={() => closeNav(1)}
-                    to={{
-                      pathname: `/ca`,
-                    }}
-                    className="linkName"
-                  >
-                    CA Portal
-                  </Link>
-                </li>
-              </ul>
-            </li>
+            // <li>
+            //   <Link
+            //     onClick={() => closeNav(1)}
+            //     to={{
+            //       pathname: `/ca`,
+            //     }}
+            //     target="_"
+            //   >
+            //     <FaUserTie className="iconNav" />
+            //     <span className="afterLogoLinkName">CA Portal</span>
+            //   </Link>
+            //   <ul className="submenu ">
+            //     <li>
+            //       <Link
+            //         target="_"
+            //         onClick={() => closeNav(1)}
+            //         to={{
+            //           pathname: `/ca`,
+            //         }}
+            //         className="linkName"
+            //       >
+            //         CA Portal
+            //       </Link>
+            //     </li>
+            //   </ul>
+            // </li>
 
             <li>
               <Link
